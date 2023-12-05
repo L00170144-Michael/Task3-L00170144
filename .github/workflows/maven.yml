@@ -39,3 +39,13 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+  deploy:
+    needs: build
+    runs-on: atu
+    steps:
+      - name: Pull Image from docker hub.
+        run: docker pull l00170144/task3:latest
+      - name: Delete old container
+        run: docker rm -f springboot-container
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name springboot-container l00170144/task3
