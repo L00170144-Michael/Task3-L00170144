@@ -18,5 +18,4 @@ public class Task3Application {
 			return "Welcome!";
 		}
 	
-
 }
