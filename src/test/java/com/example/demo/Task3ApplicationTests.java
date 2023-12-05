@@ -11,7 +11,7 @@ class Task3ApplicationTests {
 	@Test
 	void testWelcome() {
 		Task3Application welcomeTest = new Task3Application();
-		String welcome = "Welcome!";
+		String welcome = "Welcome Maria";
 		String welcomepass = welcomeTest.welcome();
 		assertEquals(welcome, welcomepass);
 	}

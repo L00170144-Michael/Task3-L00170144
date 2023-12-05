@@ -15,7 +15,7 @@ public class Task3Application {
 	
 	@GetMapping("/welcome")
 	public String welcome() {
-			return "Welcome!";
+			return "Welcome Maria";
 		}
 	
 }
